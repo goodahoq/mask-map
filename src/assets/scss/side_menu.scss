@@ -1,0 +1,120 @@
+.menu {
+  width: $menu-width;
+  height: 100%;
+  background-color: $blue;
+  position: fixed;
+  left: 0;
+  transform: translateX(-$menu-width);
+  overflow: scroll;
+  transition: .3s;
+  z-index: $menu-z-index;
+  // box-shadow: 0 3px 10px rgba($darkgrey, .5);
+
+  @media(max-width:$xxs) {
+    width: $menu-width-xxs;
+    transform: translateX(-$menu-width-xxs);
+  }
+
+  &.menu--open {
+    transform: translateX(0);
+    box-shadow: 0 3px 10px rgba($darkgrey, .5);
+  }
+
+  &__search {
+    padding: 36px 24px;
+
+  }
+
+  &__search-text {
+    margin-bottom: 8px;
+  }
+
+  &__county,
+  &__district {
+    margin-bottom: 8px;
+    padding: 0px 8px;
+  }
+
+  &__additional {
+    @include flex(center, space-around);
+  }
+
+  &__opening-hour,
+  &__mask-num {
+    padding: 0px 8px;
+    flex: 1;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+
+    .pharmacy-list {
+      background: $pureWhite;
+      padding: 16px 24px;
+      transition: .3s;
+
+      &:hover {
+        // background: $light;
+      }
+
+      &__card {
+        border-bottom: 1px solid $black;
+        cursor: pointer;
+      }
+
+      &__title {
+        font-weight: 500;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: $black;
+      }
+
+      &__info {}
+
+      &__info-detail {
+        @include flex(center, flex-start);
+        margin-bottom: 4px;
+      }
+
+      &__info-icon {
+        margin-right: 4px;
+      }
+
+      &__mask-status {
+        padding: 8px;
+        @include flex(center, space-between);
+        margin-bottom: 8px;
+      }
+
+      &__adult {
+        background-color: $orange;
+      }
+
+      &__child {
+        background-color: $green;
+      }
+
+      &__adult,
+      &__child {
+        width: 120px;
+        color: $black;
+        height: 24px;
+        @include flex();
+        padding: 8px 12px;
+        border-radius: 50px;
+
+        &-num {
+          margin: 0px 4px;
+          font-size: 20px;
+        }
+
+        &--sold {
+          background-color: $disabled;
+        }
+      }
+
+
+    }
+
+  }
+}

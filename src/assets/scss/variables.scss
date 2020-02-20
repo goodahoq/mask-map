@@ -1,0 +1,30 @@
+$light:#F1F8FC;
+$grey: #e7e7e7;
+$darkgrey: #757575;
+$text: #9b9b9b;
+$blue:#E6F1F7;
+$orange:#F4CC9A;
+$green:#B1E5BB;
+$disabled:#B2B2B2;
+$pureWhite: #ffffff;
+$medium: #eeeeee;
+$black: #1a1c25;
+
+$md: 991px;
+$sm: 768px;
+$xs: 478px;
+$xxs :320px;
+
+$menu-z-index:10000;
+$menu-btn-z-index:10001;
+$footer-z-index:10002;
+$news-z-index:9999;
+
+$menu-width:375px;
+$menu-width-xxs:320px;
+
+@mixin flex($alignItem: center, $justifyContent: center) {
+  display: flex;
+  align-items: $alignItem;
+  justify-content: $justifyContent;
+}

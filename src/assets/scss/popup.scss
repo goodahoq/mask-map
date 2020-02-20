@@ -1,0 +1,56 @@
+.popup {
+  .leaflet-popup-content-wrapper {
+    padding: 16px 20px;
+
+    .leaflet-popup-content {
+      margin: 0;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  &__address {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  &__mask-status {
+    // padding: 8px;
+    @include flex(center, space-between);
+  }
+
+  &__adult {
+    background-color: $orange;
+    width: 110px;
+  }
+
+  &__child {
+    width: 110px;
+    @include flex();
+    background-color: $green;
+  }
+
+  &__adult,
+  &__child {
+    color: $black;
+    min-height: 32px;
+    @include flex();
+    padding: 4px;
+    border-radius: 50px;
+
+    &-num {
+      margin: 0px 4px;
+      font-size: 20px;
+    }
+
+    &--sold {
+      background-color: $disabled;
+    }
+  }
+
+
+}

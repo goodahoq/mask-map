@@ -1,0 +1,44 @@
+.footer {
+  position: fixed;
+  z-index: $footer-z-index;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: $blue;
+  color: $text;
+  font-size: 12px;
+  height: 24px;
+  @include flex(center, space-between);
+
+  &__info {
+    padding: 0px 24px;
+    @include flex(center, center);
+
+    @media (max-width: $md) {
+      padding: 0px 4px;
+    }
+
+    @media(max-width:$xxs) {
+      display: none;
+    }
+
+    &--text {
+
+      margin-right: 16px;
+
+      @media (max-width: $md) {
+        display: none;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  &__des {
+    padding: 0px 24px;
+
+    @media (max-width: $md) {
+      padding: 0px 4px;
+    }
+  }
+
+}
