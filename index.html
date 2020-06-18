@@ -1,0 +1,18 @@
+<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no;" name=viewport><link rel=icon href=/mask-map/favicon.ico><link rel=stylesheet href=https://unpkg.com/leaflet@1.5.1/dist/leaflet.css><title>mask-map</title><link href=/mask-map/css/app.5868e8c1.css rel=preload as=style><link href=/mask-map/css/chunk-vendors.39a2421b.css rel=preload as=style><link href=/mask-map/js/app.0ba3952d.js rel=preload as=script><link href=/mask-map/js/chunk-vendors.a71248ca.js rel=preload as=script><link href=/mask-map/css/chunk-vendors.39a2421b.css rel=stylesheet><link href=/mask-map/css/app.5868e8c1.css rel=stylesheet></head><body><noscript><strong>We're sorry but mask-map doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script>window.onload = function() {
+      document.addEventListener('touchstart', function(event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      });
+      var lastTouchEnd = 0;
+      document.addEventListener('touchend', function(event) {
+        var now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          event.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+      document.addEventListener('gesturestart', function(event) {
+        event.preventDefault();
+      });
+    }</script><script src=/mask-map/js/chunk-vendors.a71248ca.js></script><script src=/mask-map/js/app.0ba3952d.js></script></body></html>
